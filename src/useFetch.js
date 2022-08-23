@@ -27,11 +27,11 @@ export function useFetch() {
 
     function arrayMap(price, exchange) {
         const mappedArray = price.map((ticker) => {
-            const find = exchange.find(name => name.symbol === ticker.symbol);
+            const symbolTicker = exchange.find(name => name.symbol === ticker.symbol);
 
             return {
-                baseAsset: find.baseAsset,
-                quoteAsset: find.quoteAsset,
+                baseAsset: symbolTicker.baseAsset,
+                quoteAsset: symbolTicker.quoteAsset,
                 ...ticker,
             }
         });
