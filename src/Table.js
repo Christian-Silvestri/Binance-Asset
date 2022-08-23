@@ -48,7 +48,7 @@ function DataTableComponent() {
     };
 
     return (
-        <div className="main">
+        <div className='flex justify-between w-full'>
             <DataTable {...tableData}
                 columns={columns}
                 data={data}
@@ -63,11 +63,9 @@ function DataTableComponent() {
                 <input id="search-box" onChange={filterBySearch} />
             </div>
             <div id="item-list">
-                <ol>
-                    {filteredList.map((item, index) => (
-                        <li key={index}>{item}</li>
-                    ))}
-                </ol>
+                {filteredList.map((item, index) => (
+                    <p key={index}>{item}</p>
+                ))}
             </div>
             <Link to='/'>Home</Link>
         </div>

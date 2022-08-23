@@ -7,11 +7,7 @@ function App() {
       <Link to='asset'>Asset</Link> | <Link to='market'>Market</Link>
       <Routes>
         <Route path='asset' element={<DataTableComponent />} />
-        
-        
       </Routes>
-      
-      
     </div>
   )
 }
