@@ -42,7 +42,7 @@ function DataTableComponent() {
         const query = event.target.value;
         let updatedList = [...dataArray];
         updatedList = updatedList.filter((item) => {
-            return item.toLowerCase().indexOf(query.toLowerCase()) !== -1;
+            return item.toLowerCase().includes(query.toLowerCase());
         });
         setFilteredList(updatedList);
     };
