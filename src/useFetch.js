@@ -16,7 +16,7 @@ export function useFetch() {
     function fetchDataExchange() {
         Promise.all([
             fetch(priceTicker)
-                .then(response => response.json()),
+                .then(response => response.json())
             fetch(exInfoEndpoint)
                 .then(response => response.json())
         ]).then(([tickerRes, exchangeRes]) => {
