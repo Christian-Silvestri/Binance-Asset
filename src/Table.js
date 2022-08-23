@@ -36,7 +36,7 @@ function DataTableComponent() {
         columns,
         dataArray
     };
-    const [filteredList, setFilteredList] = new useState(dataArray);
+    const [filteredList, setFilteredList] = useState(dataArray);
 
     const filterBySearch = (event) => {
         const query = event.target.value;
